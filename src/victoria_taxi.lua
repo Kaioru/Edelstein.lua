@@ -9,7 +9,7 @@ if Target.JobType == 0 then
 end
 
 dialog = dialog .. "Choose your destination, for fees will change from place to place."
-fields = { 104000000, 102000000, 100000000, 101000000, 120000000 }
+fields = { 104000000, 102000000, 101000000, 100000000, 103000000, 120000000 }
 options = { }
 
 for key, field in pairs(fields) do
