@@ -14,7 +14,7 @@ local fields = { 104000000, 102000000, 101000000, 100000000, 103000000, 12000000
 local options = { }
 
 for key, field in pairs(fields) do
-    if Target.Field ~= field then
+    if Target.Field.ID ~= field then
         options[field] = "#m" .. field .. "# (" .. cost .. " mesos)"
     end
 end
