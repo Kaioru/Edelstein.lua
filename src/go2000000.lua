@@ -1,0 +1,1 @@
+Target.EffectFieldScreen("maplemap/enter/2000000");
