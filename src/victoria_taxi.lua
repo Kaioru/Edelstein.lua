@@ -13,7 +13,7 @@ dialog = dialog .. "Choose your destination, for fees will change from place to 
 local fields = { 104000000, 102000000, 101000000, 100000000, 103000000, 120000000 }
 local options = { }
 
-for key, field in pairs(fields) do
+for _, field in pairs(fields) do
     if Target.Field.ID ~= field then
         options[field] = "#m" .. field .. "# (" .. cost .. " mesos)"
     end
