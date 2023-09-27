@@ -5,7 +5,8 @@ A collection of scripts written for the Edelstein game server
 
 ### Prerequisites
 * `Edelstein.lua` uses npm and gulp.js to flatten and minify scripts
-* Install node, npm and, gulp.js
+* Install node and gulp.js
+* Run `npm install` to install dependencies
 
 ### Publishing
 * Use the `gulp` command to clean and publish scripts into the `dist` directory
