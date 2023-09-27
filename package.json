@@ -1,0 +1,17 @@
+{
+  "name": "edelstein.lua",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "gulp"
+  },
+  "author": "Kaioru",
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^6.1.1",
+    "gulp": "^4.0.2",
+    "gulp-flatten": "^0.4.0",
+    "gulp-luaminify": "^0.0.1",
+    "gulp-newer": "^1.4.0"
+  }
+}
