@@ -1,0 +1,1 @@
+Target.EffectFieldScreen("resistance/tutorialGuide");

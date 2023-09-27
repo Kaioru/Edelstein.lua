@@ -1,0 +1,1 @@
+Target.EffectAvatarOriented("Effect/OnUserEff.img/guideEffect/resistanceTutorial/userTalk")
