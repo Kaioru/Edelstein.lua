@@ -25,7 +25,7 @@ jobs:
 
     - name: Publish
       run: |
-        npm install
+        npm ci
         gulp
 
     - name: Compress
