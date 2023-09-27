@@ -1,4 +1,4 @@
-Vel = Self.Speaker(2159007)
+local Vel = Self.Speaker(2159007)
 
 if Target.Field.ID == 931000013 then
     Self.SaySpeech({

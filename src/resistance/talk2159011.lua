@@ -1,4 +1,4 @@
-Hole = Self.Speaker(2159011)
+local Hole = Self.Speaker(2159011)
 
 if Hole.AskYesNo("#b(What a suspicious hole. Maybe Von is hiding inside. Peek inside?)#k") then
     Target.IncEXP(35)

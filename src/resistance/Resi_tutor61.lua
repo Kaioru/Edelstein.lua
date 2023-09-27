@@ -1,5 +1,5 @@
-Schiller = Self.Speaker(2159008)
-J = Self.Speaker(2159010)
+local Schiller = Self.Speaker(2159008)
+local J = Self.Speaker(2159010)
 
 Self.SaySpeech({
     Schiller.Speech("Little rats. I say, how DARE you try to escape this place?"),

@@ -1,4 +1,4 @@
-Vel = Self.Speaker(2159006)
+local Vel = Self.Speaker(2159006)
 
 if Target.Quests.GetRecord(23007, "vel00") == "" then
     Self.SaySpeech({

@@ -1,5 +1,5 @@
-Vel = Self.Speaker(2159007, 4)
-J = Self.Speaker(2159010, 8)
+local Vel = Self.Speaker(2159007, 4)
+local J = Self.Speaker(2159010, 8)
 
 Self.SaySpeech({
     J.Speech("Looks like we lost him. Of course, I could've easily handled him, no problemo, but I wasn't sure I could protect you kiddos at the same time. *chuckle* What're you two doing here anyway? Didn't your parents warn you to steer clear of the mines?"),

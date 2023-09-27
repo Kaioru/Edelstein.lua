@@ -1,5 +1,5 @@
-Schiller = Self.Speaker(2159008)
-Gelimer = Self.Speaker(2159012)
+local Schiller = Self.Speaker(2159008)
+local Gelimer = Self.Speaker(2159012)
 
 Self.SaySpeech({
     Gelimer.Speech("The experiment is going well, quite well. The endless supply of Rue is certainly speeding things along. Joining the Black Wings was a wise decision, a wise decision indeed. Muahaha!"),

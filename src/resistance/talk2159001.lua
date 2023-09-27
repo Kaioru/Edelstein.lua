@@ -1,6 +1,6 @@
-Jun = Self.Speaker(2159000, 4)
-Ulrika = Self.Speaker(2159001, 8)
-Von = Self.Speaker(2159002, 4)
+local Jun = Self.Speaker(2159000, 4)
+local Ulrika = Self.Speaker(2159001, 8)
+local Von = Self.Speaker(2159002, 4)
 
 Self.SaySpeech({
     Ulrika.Speech("There you are, #h #! You're late. Get over here."),
