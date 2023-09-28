@@ -1,5 +1,5 @@
 if Target.Quests.GetStatus(22010) == 0 then
-    Target.Message("Cannot enter the Lush Forest without a reason.")
+    -- TODO proper text
     return
 end
 
