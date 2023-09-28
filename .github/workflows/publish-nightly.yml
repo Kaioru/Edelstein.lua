@@ -49,6 +49,13 @@ jobs:
         npm ci
         gulp
 
+    - name: Add VERSION, COMMIT, LICENSE, and README files
+      run: |
+        echo "nightly.${{ needs.setup.outputs.date }}" > dist/VERSION
+        echo ${{ github.sha }} > dist/COMMIT
+        cp LICENSE dist/
+        cp README.md dist/
+
     - name: Compress
       run: cd dist/; zip ../scripts-nightly.${{ needs.setup.outputs.date }}.zip *; cd ..
 
