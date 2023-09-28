@@ -50,7 +50,7 @@ jobs:
         gulp
 
     - name: Compress
-      run: cd dist/; zip ../scripts.zip *; cd ..
+      run: cd dist/; zip ../scripts-nightly.${{ needs.setup.outputs.date }}.zip *; cd ..
 
     - uses: actions/upload-artifact@v3
       with:
