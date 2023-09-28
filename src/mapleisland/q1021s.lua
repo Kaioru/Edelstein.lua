@@ -4,7 +4,7 @@ Self.Say({
 })
 
 Self.Say("So..... Let me just do this for fun! Abaracadabra~!")
-Target.HP = Target.MaxHP - 25
+Target.HP = Target.HP / 2
 
 Self.Say({
     "Surprised? If HP becomes 0, then you are in trouble. Now, I will give you #rRoger's Apple#k. Please take it. You will feel stronger. Open the Item window and double click to consume. Hey, it's very simple to open the Item window. Just press #bI#k on your keyboard.",
