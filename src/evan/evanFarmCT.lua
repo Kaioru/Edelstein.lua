@@ -1,4 +1,4 @@
-if Target.Quests.GetStatus(22010) == 0 then
+if Target.Job == 2001 and Target.Quests.GetStatus(22010) == 0 then
     -- TODO proper text
     return
 end
