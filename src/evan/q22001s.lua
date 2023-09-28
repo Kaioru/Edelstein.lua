@@ -16,3 +16,4 @@ end
 Target.Inventory.Add(4032447)
 Target.Quests.Accept(22001)
 Self.Say("Hurry up and head #bleft#k to feed #b#p1013102##k. He's been barking to be fed all morning.")
+Self.SayImage("UI/tutorial/evan/1/0")
