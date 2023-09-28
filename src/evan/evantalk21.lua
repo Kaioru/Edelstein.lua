@@ -1,4 +1,6 @@
-if Target.Quests.GetRecord(22013, "mo21") == "" then
-    Target.Quests.SetRecord(22013, "mo21", "o")
+require("qr_evan")
+
+if Target.Quests.GetRecordEx(QR_Evan_Glove, "mo21") == "" then
+    Target.Quests.SetRecordEx(QR_Evan_Glove, "mo21", "o")
     Target.EffectAvatarOriented("Effect/OnUserEff.img/guideEffect/evanTutorial/evanBalloon21")
 end

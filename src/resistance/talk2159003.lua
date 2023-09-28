@@ -1,4 +1,4 @@
-if Target.Quests.GetRecord(23007, "exp1") == "1" then
+if Target.Quests.GetRecordEx(23007, "exp1") == "1" then
     Self.Say("Did you find Ulrika and Von yet? Von is really, really good at hiding.")
     return
 end
@@ -10,4 +10,4 @@ Self.Say({
 })
 
 Target.IncEXP(5)
-Target.Quests.SetRecord(23007, "exp1", "1")
+Target.Quests.SetRecordEx(23007, "exp1", "1")

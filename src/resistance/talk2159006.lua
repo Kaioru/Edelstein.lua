@@ -1,6 +1,6 @@
 local Vel = Self.Speaker(2159006)
 
-if Target.Quests.GetRecord(23007, "vel00") == "" then
+if Target.Quests.GetRecordEx(23007, "vel00") == "" then
     Self.SaySpeech({
         Vel.Speech("Stay back!"),
         Vel.Speech("How did you get here? This place is prohibited!"),
@@ -8,12 +8,12 @@ if Target.Quests.GetRecord(23007, "vel00") == "" then
         Vel.Speech("Look up.")
     })
 
-    Target.Quests.SetRecord(23007, "vel00", "1")
+    Target.Quests.SetRecordEx(23007, "vel00", "1")
     Target.EffectReserved("Effect/Direction4.img/Resistance/ClickVel")
     return
 end
 
-if Target.Quests.GetRecord(23007, "vel00") == "1" then
+if Target.Quests.GetRecordEx(23007, "vel00") == "1" then
     Self.SaySpeech({
         Vel.Speech("My name is #bVita#k. I'm one of #rDoctor Gelimer's#k test subjects. But that's not important right now. You have to get out of here before someone sees you!"),
         Target.Speech("Wait, what are you talking about? Someone's doing experiments on you?! And who's Gelimer?"),
@@ -24,12 +24,12 @@ if Target.Quests.GetRecord(23007, "vel00") == "1" then
         Vel.Speech("Shhh! Did you hear that? Someone's coming! It's got to be Doctor Gelimer! Oh no!")
     })
 
-    Target.Quests.SetRecord(23007, "vel00", "2")
+    Target.Quests.SetRecordEx(23007, "vel00", "2")
     Target.TransferField(931000011)
     return
 end
 
-if Target.Quests.GetRecord(23007, "vel00") == "2" and Target.Field.ID == 931000012 then
+if Target.Quests.GetRecordEx(23007, "vel00") == "2" and Target.Field.ID == 931000012 then
     Self.SaySpeech({
         Vel.Speech("Whew, something must have distracted them. Now's your chance. GO!"),
         Target.Speech("But if I flee, you'll be left here alone..."),
