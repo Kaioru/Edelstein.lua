@@ -1,0 +1,77 @@
+name: Publish (Nightly)
+
+on: 
+  schedule:
+   - cron: "0 0 * * *"
+
+jobs:
+  setup:
+    if: github.repository == 'Kaioru/Edelstein.lua'
+    runs-on: ubuntu-latest
+
+    name: Setup
+
+    outputs:
+      should_run: ${{ steps.should_run.outputs.should_run }}
+      date:  ${{ steps.date.outputs.date }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check current date
+        id: date
+        run: echo "date=$(date +'%Y%m%d')" >> $GITHUB_OUTPUT
+        
+      - id: should_run
+        continue-on-error: true
+        name: Check for new commits
+        if: ${{ github.event_name == 'schedule' }}
+        run: test -z $(git rev-list --after="24 hours" ${{ github.sha }}) && echo "should_run=false" >> $GITHUB_OUTPUT
+
+
+  publish:
+    needs: setup
+    if: ${{ needs.setup.outputs.should_run != 'false' }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18.x
+        cache: 'npm'
+
+    - name: Publish
+      run: |
+        npm ci
+        gulp
+
+    - name: Compress
+      run: cd dist/; zip ../scripts.zip *; cd ..
+
+    - uses: actions/upload-artifact@v3
+      with:
+        name: scripts-nightly.${{ needs.setup.outputs.date }}
+        path: scripts-nightly.${{ needs.setup.outputs.date }}.zip
+
+  publish_release:
+    needs: [setup, publish]
+    if: ${{ needs.setup.outputs.should_run != 'false' }}
+
+    runs-on: ubuntu-latest
+    name: Publish to Github releases
+
+    steps:
+    - name: Download artifacts
+      uses: actions/download-artifact@v3
+
+    - uses: "marvinpinto/action-automatic-releases@v1.2.1"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "nightly"
+        prerelease: true
+        title: "Nightly Build (${{ needs.setup.outputs.date }})"
+        files: "*/*.zip"
