@@ -1,4 +1,4 @@
-Self.Say("Ah, did you bring all the Thick Branches? That's my kid! What shall i give you as reward?... Let's see... Oh, right!\r\n\r\n#fUI/UIWindow2.img/QuestIcon/4/0#\r\n#v3010097# Strong Wooden Chair\r\n#v2022621# 15 Tasty Milks\r\n#v2022622# 15 Squeezed Juice\r\n\r\n#fUI/UIWindow2.img/QuestIcon/8/0# 210 exp")
+Self.Say("Ah, did you bring all the #t4032498#es? That's my kid! What shall I give you as a reward... Let's see... Oh, right!\r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0#\r\n#i3010097# 1 #t3010097#\r\n#i2022621# 15 #t2022621#s\r\n#i2022622# 15 #t2022622#s\r\n\r\n#fUI/UIWindow.img/QuestIcon/8/0# 210 exp")
 
 if not Target.Inventory.HasSlotFor({
     [3010097] = 1,

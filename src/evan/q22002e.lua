@@ -1,4 +1,4 @@
-Self.Say("Did you eat your breakfast, evan? Then, will you do me a favor?\r\n\r\n#fUI/UIWindow2.img/QuestIcon/4/0#\r\n#v1003028# 1 Straw Hat\r\n#v2022621# 5 Tasty Milks\r\n#v2022622# 5 Squeezed Juice\r\n\r\n#fUI/UIWindow2.img/QuestIcon/8/0# 60 exp")
+Self.Say("Did you eat your breakfast, evan? Then, will you do me a favor?\r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0#\r\n#i1003028# 1 #t1003028#\r\n#i2022621# 5 #t2022621#s\r\n#i2022622# 5 #t2022622#\r\n#fUI/UIWindow.img/QuestIcon/8/0# 60 exp")
 
 if not Target.Inventory.HasSlotFor({
     [1003028] = 1,

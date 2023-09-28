@@ -14,4 +14,4 @@ Target.Quests.Accept(22002)
 Target.Inventory.Add(2022620)
 Target.HP = Target.HP / 2
 Target.Say("#b(Mom has something to say? Eat your Handmade Sandwich and head back inside the house.)")
-Self.SayImage("UI/tutorial/evan/2/0")
+Self.SayImage("UI/tutorial/evan/3/0")
