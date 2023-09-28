@@ -1,4 +1,4 @@
-require("qr_evan")
+require("lib_evan")
 
 if Target.Quests.GetRecordEx(QR_Evan_Glove, "mo11") == "" then
     Target.Quests.SetRecordEx(QR_Evan_Glove, "mo11", "o")
