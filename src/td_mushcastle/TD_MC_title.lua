@@ -1,0 +1,1 @@
+Target.EffectFieldScreen("temaD/enter/mushCatle");
