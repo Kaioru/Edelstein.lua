@@ -17,9 +17,7 @@ Target.Quests.Accept(Self.QuestID)
 Target.Inventory.Add(4032375)
 
 if Self.AskYesNo("By the way, do you know where Kingdom of Mushroom is located? It'll be okay if you can find your way there, but if you don't mind, I can take you straight to the entrance.") then
-    Target.Quests.SetRecord(2311, "1")
-    Target.TransferField(106020000)
-    -- TODO Effect
+    Target.TransferField(106020001)
     return
 end
 
